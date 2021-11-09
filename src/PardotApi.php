@@ -307,6 +307,6 @@ class PardotApi implements PardotApiInterface
             ->setObject($object)
             ->setOperator($operator)
             ->setData($data)
-            ->request($object);
+            ->request(($operator == 'query') ? 'result' : $object);
     }
 }
